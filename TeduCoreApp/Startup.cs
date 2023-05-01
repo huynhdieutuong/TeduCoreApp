@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TeduCoreApp.Application.AutoMapper;
 using TeduCoreApp.Data;
 using TeduCoreApp.Data.EF;
 using TeduCoreApp.Data.Entities;
@@ -31,7 +32,7 @@ namespace TeduCoreApp
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"), 
+                    Configuration.GetConnectionString("DefaultConnection"),
                     o => o.MigrationsAssembly("TeduCoreApp.Data.EF")));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddIdentity<AppUser, AppRole>()
@@ -58,6 +59,8 @@ namespace TeduCoreApp
 
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
+
+            services.AddSingleton(AutoMapperConfig.RegisterMappings().CreateMapper());
 
             services.AddTransient<DbInitializer>();
         }
