@@ -154,3 +154,7 @@ Function
 WholePrice
 
 Permission
+
+=======
+add-migration initial
+update-database
