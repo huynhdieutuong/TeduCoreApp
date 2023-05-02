@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "gentelella@1.4.0",
+      "destination": "wwwroot/lib/gentelella"
+    },
+    {
+      "library": "font-awesome@6.4.0",
+      "destination": "wwwroot/lib/font-awesome"
+    },
+    {
+      "library": "nprogress@0.2.0",
+      "destination": "wwwroot/lib/nprogress"
+    },
+    {
+      "library": "bootstrap-daterangepicker@3.0.5",
+      "destination": "wwwroot/lib/bootstrap-daterangepicker"
+    },
+    {
+      "library": "fastclick@1.0.6",
+      "destination": "wwwroot/lib/fastclick"
+    },
+    {
+      "library": "Chart.js@4.3.0",
+      "destination": "wwwroot/lib/Chart.js"
+    },
+    {
+      "library": "jquery-sparklines@2.1.2",
+      "destination": "wwwroot/lib/jquery-sparklines"
+    },
+    {
+      "library": "flot@4.2.4",
+      "destination": "wwwroot/lib/flot"
+    },
+    {
+      "library": "datejs@1.0",
+      "destination": "wwwroot/lib/DateJS"
+    },
+    {
+      "library": "moment.js@2.29.4",
+      "destination": "wwwroot/lib/moment.js"
+    }
+  ]
+}

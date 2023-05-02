@@ -91,6 +91,9 @@ namespace TeduCoreApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+
+                endpoints.MapControllerRoute("areaRoute",
+                    "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
