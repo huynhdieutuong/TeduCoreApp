@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TeduCoreApp.Data.Entities;
 using TeduCoreApp.Models.AccountViewModels;
+using TeduCoreApp.Utilities.Constants;
 
 namespace TeduCoreApp.WebApi.Controllers
 {
@@ -61,10 +62,10 @@ namespace TeduCoreApp.WebApi.Controllers
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim("fullName", user.FullName),
-                new Claim("avatar", user.Avatar ?? string.Empty),
-                new Claim("roles", string.Join(";", roles)),
-                new Claim("permissions", ""),
+                new Claim(CommonConstants.UserClaims.FullName, user.FullName),
+                new Claim(CommonConstants.UserClaims.Avatar, user.Avatar ?? string.Empty),
+                new Claim(CommonConstants.UserClaims.Roles, string.Join(";", roles)),
+                new Claim(CommonConstants.UserClaims.Permissions, ""),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 

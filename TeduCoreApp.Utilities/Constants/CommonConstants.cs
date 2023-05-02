@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TeduCoreApp.Utilities.Constants
+﻿namespace TeduCoreApp.Utilities.Constants
 {
     public class CommonConstants
     {
@@ -21,6 +17,9 @@ namespace TeduCoreApp.Utilities.Constants
         public class UserClaims
         {
             public const string Roles = "Roles";
+            public const string FullName = "FullName";
+            public const string Avatar = "Avatar";
+            public const string Permissions = "Permissions";
         }
     }
 }

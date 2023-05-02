@@ -17,7 +17,6 @@ using TeduCoreApp.Data.EF;
 using TeduCoreApp.Data.EF.Repositories;
 using TeduCoreApp.Data.Entities;
 using TeduCoreApp.Data.IRepositories;
-using TeduCoreApp.Helpers;
 using TeduCoreApp.Infrastructure.Interfaces;
 
 namespace TeduCoreApp.WebApi
@@ -83,12 +82,15 @@ namespace TeduCoreApp.WebApi
 
             services.AddSingleton(AutoMapperConfig.RegisterMappings().CreateMapper());
 
-            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
+            //services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
 
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
 
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
+
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
+            services.AddTransient<IFunctionService, FunctionService>();
 
             services.AddTransient<DbInitializer>();
 
