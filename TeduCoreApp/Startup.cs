@@ -15,6 +15,7 @@ using TeduCoreApp.Application.AutoMapper;
 using TeduCoreApp.Data;
 using TeduCoreApp.Data.EF;
 using TeduCoreApp.Data.Entities;
+using TeduCoreApp.Helpers;
 
 namespace TeduCoreApp
 {
@@ -63,6 +64,8 @@ namespace TeduCoreApp
             services.AddSingleton(AutoMapperConfig.RegisterMappings().CreateMapper());
 
             services.AddTransient<DbInitializer>();
+
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

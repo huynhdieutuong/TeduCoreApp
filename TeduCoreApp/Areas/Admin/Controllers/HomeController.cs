@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TeduCoreApp.Extensions;
 
 namespace TeduCoreApp.Areas.Admin.Controllers
 {
@@ -7,6 +8,8 @@ namespace TeduCoreApp.Areas.Admin.Controllers
         [Area("Admin")]
         public IActionResult Index()
         {
+            var email = User.GetSpecificClaim("Email");
+
             return View();
         }
     }
