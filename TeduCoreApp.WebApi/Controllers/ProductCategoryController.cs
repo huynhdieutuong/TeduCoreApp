@@ -20,6 +20,7 @@ namespace TeduCoreApp.WebApi.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Get()
         {
             var productCategoriesVm = _productCategoryService.GetAll();

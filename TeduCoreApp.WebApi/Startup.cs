@@ -85,11 +85,14 @@ namespace TeduCoreApp.WebApi
             //services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
 
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
 
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IFunctionRepository, FunctionRepository>();
 
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
+            services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IFunctionService, FunctionService>();
 
             services.AddTransient<DbInitializer>();
