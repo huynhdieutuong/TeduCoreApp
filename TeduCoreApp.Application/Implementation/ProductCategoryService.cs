@@ -7,6 +7,7 @@ using TeduCoreApp.Data.Entities;
 using TeduCoreApp.Data.Enums;
 using TeduCoreApp.Data.IRepositories;
 using TeduCoreApp.Infrastructure.Interfaces;
+using TeduCoreApp.Utilities.Helpers;
 
 namespace TeduCoreApp.Application.Implementation
 {
@@ -25,6 +26,8 @@ namespace TeduCoreApp.Application.Implementation
 
         public ProductCategoryViewModel Add(ProductCategoryViewModel productCategoryVm)
         {
+            productCategoryVm.SeoAlias = TextHelper.ToUnsignString(productCategoryVm.Name);
+
             var productCategory = _mapper.Map<ProductCategory>(productCategoryVm);
             _productCategoryRepository.Add(productCategory);
             return productCategoryVm;
@@ -89,6 +92,8 @@ namespace TeduCoreApp.Application.Implementation
 
         public void Update(ProductCategoryViewModel productCategoryVm)
         {
+            productCategoryVm.SeoAlias = TextHelper.ToUnsignString(productCategoryVm.Name);
+
             var productCategory = _mapper.Map<ProductCategory>(productCategoryVm);
             _productCategoryRepository.Update(productCategory);
         }

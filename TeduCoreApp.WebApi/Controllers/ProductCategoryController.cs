@@ -56,7 +56,6 @@ namespace TeduCoreApp.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        [AllowAnonymous]
         public IActionResult Delete(int id)
         {
             _productCategoryService.Delete(id);
