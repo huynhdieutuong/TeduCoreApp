@@ -33,27 +33,15 @@ namespace TeduCoreApp.Data.EF
         public IQueryable<T> FindAll(params Expression<Func<T, object>>[] includeProperties)
         {
             IQueryable<T> items = _context.Set<T>();
-            if (includeProperties != null)
-            {
-                foreach (var includeProperty in includeProperties)
-                {
-                    items.Include(includeProperty);
-                }
-            }
+            items = includeProperties.Aggregate(items, (current, includeProperty) => current.Include(includeProperty));
             return items;
         }
 
         public IQueryable<T> FindAll(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties)
         {
-            IQueryable<T> items = _context.Set<T>();
-            if (includeProperties != null)
-            {
-                foreach (var includeProperty in includeProperties)
-                {
-                    items.Include(includeProperty);
-                }
-            }
-            return items.Where(predicate);
+            //IQueryable<T> items = _context.Set<T>();
+            //items = includeProperties.Aggregate(items, (current, includeProperty) => current.Include(includeProperty));
+            return FindAll(includeProperties).Where(predicate);
         }
 
         public T FindById(K id, params Expression<Func<T, object>>[] includeProperties)
