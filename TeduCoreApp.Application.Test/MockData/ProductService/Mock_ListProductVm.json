@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Men new shirt",
+    "categoryId": 5,
+    "price": 110,
+    "tags": "men,shirt"
+  },
+  {
+    "name": "Woman new shirt",
+    "categoryId": 6,
+    "price": 510,
+    "tags": "woman,shirt"
+  }
+]

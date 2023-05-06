@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeduCoreApp.WebApi", "TeduC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{A61BE85D-79C2-4112-AF3C-2EA257DFA14A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeduCoreApp.Utilities.Test", "TeduCoreApp.Utilities.Test\TeduCoreApp.Utilities.Test.csproj", "{088C730D-00F7-4852-A6F8-B1B72B8E903F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeduCoreApp.Utilities.Test", "TeduCoreApp.Utilities.Test\TeduCoreApp.Utilities.Test.csproj", "{088C730D-00F7-4852-A6F8-B1B72B8E903F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeduCoreApp.Data.EF.Test", "TeduCoreApp.Data.EF.Tests\TeduCoreApp.Data.EF.Test.csproj", "{78E45EA5-558D-4FA7-857B-BA474D578B64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeduCoreApp.Data.EF.Test", "TeduCoreApp.Data.EF.Tests\TeduCoreApp.Data.EF.Test.csproj", "{78E45EA5-558D-4FA7-857B-BA474D578B64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeduCoreApp.Application.Test", "TeduCoreApp.Application.Test\TeduCoreApp.Application.Test.csproj", "{65840689-BB8A-477B-B37E-0A695939468F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{78E45EA5-558D-4FA7-857B-BA474D578B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78E45EA5-558D-4FA7-857B-BA474D578B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78E45EA5-558D-4FA7-857B-BA474D578B64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65840689-BB8A-477B-B37E-0A695939468F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65840689-BB8A-477B-B37E-0A695939468F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65840689-BB8A-477B-B37E-0A695939468F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65840689-BB8A-477B-B37E-0A695939468F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{65B22616-2894-440A-9D80-FCD67C480E81} = {1EB95E40-8C08-49AB-8986-405B8B20B3A5}
 		{088C730D-00F7-4852-A6F8-B1B72B8E903F} = {A61BE85D-79C2-4112-AF3C-2EA257DFA14A}
 		{78E45EA5-558D-4FA7-857B-BA474D578B64} = {A61BE85D-79C2-4112-AF3C-2EA257DFA14A}
+		{65840689-BB8A-477B-B37E-0A695939468F} = {A61BE85D-79C2-4112-AF3C-2EA257DFA14A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E73549E7-BCC0-41F1-BE68-E1C39828F680}

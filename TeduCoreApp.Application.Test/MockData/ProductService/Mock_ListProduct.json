@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Men new shirt",
+    "categoryId": 5,
+    "price": 110,
+    "tags": "men,shirt",
+    "productTags": [
+      {
+        "tagId": "men"
+      },
+      {
+        "tagId": "shirt"
+      }
+    ]
+  },
+  {
+    "name": "Woman new shirt",
+    "categoryId": 5,
+    "price": 510,
+    "tags": "woman,shirt",
+    "productTags": [
+      {
+        "tagId": "woman"
+      },
+      {
+        "tagId": "shirt"
+      }
+    ]
+  }
+]

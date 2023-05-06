@@ -1,0 +1,14 @@
+{
+  "name": "Men new shirt",
+  "categoryId": 5,
+  "price": 110,
+  "tags": "men,shirt",
+  "productTags": [
+    {
+      "tagId": "men"
+    },
+    {
+      "tagId": "shirt"
+    }
+  ]
+}
